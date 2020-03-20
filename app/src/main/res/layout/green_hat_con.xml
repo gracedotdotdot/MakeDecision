@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toTopOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btninfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:src="@drawable/information"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+                app:layout_constraintEnd_toStartOf="@+id/btncheck"
+                app:layout_constraintTop_toTopOf="@+id/toolbar"/>
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_blank" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalGuidelineOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".2" />
+
+            <View
+                android:id="@+id/verticalLine"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/verticalGuidelineOut"
+                app:layout_constraintStart_toStartOf="@+id/verticalGuidelineOut"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/btncheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:src="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="yellow hat icon"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline2"
+                app:layout_constraintEnd_toStartOf="@+id/verticalGuidelineOut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:srcCompat="@drawable/green" />
+
+            <TextView
+                android:id="@+id/txtTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="下列那些壞處是可能\n 可以被克服的嗎?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <View
+                android:id="@+id/horizonLine6"
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalGuideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".6" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalGuideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintGuide_percent=".2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/horizontalGuideline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/verticalGuideline1"
+                app:layout_constraintTop_toTopOf="@+id/horizontalGuideline2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scrollConstraintLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintBottom_toTopOf="@+id/sub1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView11"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/TextView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon11"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView11"
+                            app:layout_constraintStart_toStartOf="@id/TextView11"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView11" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout16"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout15">
+
+                        <TextView
+                            android:id="@+id/TextView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView16"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView16"
+                            app:layout_constraintStart_toStartOf="@id/TextView16"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView16" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout15"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
+
+                        <TextView
+                            android:id="@+id/TextView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon15"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView15"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView15"
+                            app:layout_constraintStart_toStartOf="@id/TextView15"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView15" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout15"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
+
+                        <TextView
+                            android:id="@+id/TextView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon14"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView14"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView14"
+                            app:layout_constraintStart_toStartOf="@id/TextView14"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView14" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+                        <TextView
+                            android:id="@+id/TextView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon13"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView13"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView13"
+                            app:layout_constraintStart_toStartOf="@id/TextView13"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView13" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout13"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+                        <TextView
+                            android:id="@+id/TextView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintBottom_toTopOf="@+id/sub2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView12"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView12"
+                            app:layout_constraintStart_toStartOf="@id/TextView12"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView12" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+            <!-- Second Choice-->
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/verticalGuideline1"
+                app:layout_constraintTop_toBottomOf="@id/horizontalGuideline6">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scrollConstraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout25"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout26"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout24">
+
+                        <TextView
+                            android:id="@+id/TextView25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon25"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView25"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub25"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView25"
+                            app:layout_constraintStart_toStartOf="@id/TextView25"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView25" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout26"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout25">
+
+                        <TextView
+                            android:id="@+id/TextView26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon26"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView26"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub26"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView26"
+                            app:layout_constraintStart_toStartOf="@id/TextView26"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView26" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout23"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout21">
+
+                        <TextView
+                            android:id="@+id/TextView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon22"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView22"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub22"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView22"
+                            app:layout_constraintStart_toStartOf="@id/TextView22"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView22" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout23"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout22">
+
+                        <TextView
+                            android:id="@+id/TextView23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon23"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView23"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub23"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView23"
+                            app:layout_constraintStart_toStartOf="@id/TextView23"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView23" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout25"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout23">
+
+                        <TextView
+                            android:id="@+id/TextView24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView24"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub24"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView24"
+                            app:layout_constraintStart_toStartOf="@id/TextView24"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView24" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout22"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <CheckBox
+                            android:id="@+id/checkAddCon21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/TextView21"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/TextView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:hint="優點"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/checkAddCon21"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/sub21"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            app:layout_constraintEnd_toEndOf="@id/TextView21"
+                            app:layout_constraintStart_toStartOf="@id/TextView21"
+                            app:layout_constraintTop_toBottomOf="@+id/TextView21" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/choice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="選項一"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/verticalLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontalGuideline2" />
+
+            <TextView
+                android:id="@+id/choice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="選項二"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/verticalLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizonLine6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

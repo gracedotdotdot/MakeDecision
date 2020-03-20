@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnNonRandom"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="非隨機"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnRandom"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <Button
+            android:id="@+id/btnRandom"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorAccent"
+            android:text="隨機"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnNonRandom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".75" />
+
+        <EditText
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="你的問題是?"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+        <ImageButton
+            android:id="@+id/btncheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/check"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".1" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/choice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:hint="選項"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorAccent"
+                    app:layout_constraintBottom_toTopOf="@+id/btnAddChoice3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/choice1" />
+
+                <EditText
+                    android:id="@+id/choice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:hint="選項"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorAccent"
+                    app:layout_constraintBottom_toTopOf="@+id/choice2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/addChoice3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:hint="新增選項"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorAccent"
+                    app:layout_constraintBottom_toTopOf="@+id/btnAddChoice4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/choice2" />
+
+                <EditText
+                    android:id="@+id/addChoice4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:hint="新增選項"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorAccent"
+                    app:layout_constraintBottom_toTopOf="@+id/addChoice5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addChoice3" />
+
+                <EditText
+                    android:id="@+id/addChoice5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:hint="新增選項"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorAccent"
+                    app:layout_constraintBottom_toTopOf="@+id/btnAddChoice6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addChoice4" />
+
+                <EditText
+                    android:id="@+id/addChoice6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:ems="10"
+                    android:hint="新增選項"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addChoice5" />
+
+                <ImageButton
+                    android:id="@+id/btnAddChoice6"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:src="@drawable/add_light"
+                    app:layout_constraintEnd_toEndOf="@+id/addChoice6"
+                    app:layout_constraintTop_toTopOf="@id/addChoice6" />
+
+                <ImageButton
+                    android:id="@+id/btnAddChoice4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:src="@drawable/add_light"
+                    app:layout_constraintEnd_toEndOf="@+id/addChoice4"
+                    app:layout_constraintTop_toTopOf="@id/addChoice4" />
+
+                <ImageButton
+                    android:id="@+id/btnAddChoice5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:src="@drawable/add_light"
+                    app:layout_constraintEnd_toEndOf="@+id/addChoice5"
+                    app:layout_constraintTop_toTopOf="@+id/addChoice5" />
+
+                <ImageButton
+                    android:id="@+id/btnAddChoice3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:src="@drawable/add_light"
+                    app:layout_constraintEnd_toEndOf="@+id/addChoice3"
+                    app:layout_constraintTop_toTopOf="@id/addChoice3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

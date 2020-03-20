@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "677653277110",
+    "firebase_url": "https://neon-framing-248213.firebaseio.com",
+    "project_id": "neon-framing-248213",
+    "storage_bucket": "neon-framing-248213.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677653277110:android:0b9650c6fe009dc3a43917",
+        "android_client_info": {
+          "package_name": "com.example.circularmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677653277110-ftn23pulge1cier5dbausttifkr2jjot.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.circularmarket",
+            "certificate_hash": "81f785b6dad46da64c30c545f89dcd2d8eed7189"
+          }
+        },
+        {
+          "client_id": "677653277110-9t1utdbql49r8c6oespiivmdhc41qjrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBgNfy18DixfL-HSCBGH7ItjZr1k7B1nI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677653277110-9t1utdbql49r8c6oespiivmdhc41qjrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
